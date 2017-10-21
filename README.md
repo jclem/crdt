@@ -13,6 +13,7 @@ to get more comfortable with Go and to learn about CRDTs.
 ## Included CRDTs
 
 - [gcounter](gcounter/) A grow-only counter
+- [LWW Register](lwwregister/) A last-write wins register
 - [pncounter](pncounter/) A counter which can increment or decrement
 - [rgass](rgass/) A CRDT for efficient string-based collaborative editing
 
