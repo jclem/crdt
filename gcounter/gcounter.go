@@ -20,7 +20,7 @@ func (g *GCounter) Increment() {
 
 // Incorporate incorporates a remote GCounter value
 func (g *GCounter) Incorporate(id id, val int) {
-	if existingVal := g.vals[id]; existingVal < val {
+	if val > g.vals[id] {
 		g.vals[id] = val
 	}
 }
