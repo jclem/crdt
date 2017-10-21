@@ -35,7 +35,6 @@ func (r *LWWRegister) Incorporate(ts Timestamp, val interface{}) {
 		r.vec = ts.Vec + 1
 		r.ts = ts
 		r.Val = val
-		return
 	}
 }
 
