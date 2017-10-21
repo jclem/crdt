@@ -5,7 +5,6 @@ type id string
 // A GCounter is a grow-only counter
 type GCounter struct {
 	id   id
-	val  int
 	vals map[id]int
 }
 
@@ -16,8 +15,7 @@ func NewGCounter(gid id) *GCounter {
 
 // Increment increments the value at this site for the GCounter
 func (g *GCounter) Increment() {
-	g.val++
-	g.vals[g.id] = g.val
+	g.vals[g.id]++
 }
 
 // Incorporate incorporates a remote GCounter value
