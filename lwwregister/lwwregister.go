@@ -33,6 +33,7 @@ func (r *LWWRegister) Update(val interface{}) {
 func (r *LWWRegister) Incorporate(ts Timestamp, val interface{}) {
 	if r.ts.Compare(ts) == -1 {
 		r.vec = ts.Vec + 1
+		r.ts = ts
 		r.Val = val
 		return
 	}
